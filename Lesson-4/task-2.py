@@ -18,3 +18,13 @@
 # 10 в степени 4 равно 10000
 # 
 # Пожалуйста соблюдайте пробелы между словами! Между словами РОВНО ОДИН пробел!
+
+from math import fmod, pow
+
+a = int(input())
+b = int(input())
+print(a * b)
+print(a / b)
+print(a // b)
+print(int(fmod(a, b)))
+print(int(pow(a, b)))
