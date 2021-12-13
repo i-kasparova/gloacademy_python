@@ -23,8 +23,8 @@ from math import fmod, pow
 
 a = int(input())
 b = int(input())
-print(a * b)
-print(a / b)
-print(a // b)
-print(int(fmod(a, b)))
-print(int(pow(a, b)))
+print(a, 'умноженное на', b, 'равно', a * b)
+print(a, 'деленное на', b, 'равно', a / b)
+print(a, 'нацело деленное на', b, 'равно', a // b)
+print('Остаток от деления', a, 'на', b, 'равен', (int(fmod(a, b))))
+print(a, 'в степени', b, 'равно', (int(pow(a, b))))
