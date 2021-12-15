@@ -19,6 +19,4 @@ r = int(input())
 k = int(input())
 n = int(input())
 
-price = (r + k * 0.01) * n
-
-print('За', n, 'мяча нужно заплатить', int(price // 1), 'рублей и', int(fmod(price, 1)), 'копеек')
+print('За', n, 'мячей нужно заплатить', r * n + k * n // 100, 'рублей', k * n % 100, 'копеек')
