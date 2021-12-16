@@ -13,10 +13,12 @@
 # Вывод должен следующим:
 # За 2 мяча нужно заплатить 11 рублей и 0 копеек
 
-from math import fmod
+from math import ceil
 
 r = int(input())
 k = int(input())
 n = int(input())
 
-print('За', n, 'мячей нужно заплатить', r * n + k * n // 100, 'рублей', k * n % 100, 'копеек')
+price = r * n + k * n / 100
+
+print('За', n, 'мячей нужно заплатить', int(price // 1), 'рублей и', ceil(price % 1 * 100), 'копеек')
