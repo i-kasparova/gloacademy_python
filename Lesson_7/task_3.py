@@ -3,5 +3,11 @@
 a = int(input())
 b = int(input())
 
-for i in range(a, b + 1):
-    print(i)
+if a == b:
+    print(a)
+elif a < b:
+    for i in range(a, b + 1):
+        print(i)
+else:
+    for i in range(b, a + 1):
+        print(i)
