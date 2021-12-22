@@ -4,5 +4,9 @@
 c1 = input()
 c2 = input()
 
-for i in range (ord(c1), ord(c2)+1):
-    print(chr(i), end = ' ')
+if ord(c1) < ord(c2):
+    for i in range (ord(c1), ord(c2)+1):
+        print(chr(i), end = ' ')
+else:
+    for i in range(ord(c2), ord(c1)+1):
+        print(chr(i), end=' ')
