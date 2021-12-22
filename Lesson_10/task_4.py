@@ -3,4 +3,9 @@
 
 c = input()
 
-print(c.upper())
+if ord(c) >= 97 and ord(c) <= 122:
+    print(c.upper())
+elif ord(c) >= 65 and ord(c) <= 90:
+    print(c.lower())
+else:
+    print(c)
