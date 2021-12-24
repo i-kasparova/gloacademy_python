@@ -2,10 +2,10 @@
 # Напишите программу, которая определяет является ли введенная строка текста ip-адресом.
 
 s = input()
-list = s.split('.')
+numbers = s.split('.')
 flag = 1
 
-for i in list:
+for i in numbers:
     if int(i) > 255:
         flag = 0
 
