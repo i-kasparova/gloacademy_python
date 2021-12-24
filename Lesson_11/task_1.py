@@ -10,6 +10,6 @@ for i in range(n):
 
 query = input().lower()
 
-for i in range(n):
-    if list[i].lower().count(query):
-        print(list[i])
+for i in list:
+    if i.lower().count(query):
+        print(i)
