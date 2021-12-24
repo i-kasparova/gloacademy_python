@@ -3,7 +3,5 @@
 numbers = input().split()
 
 for i in numbers:
-    if numbers.count(i) > 1:
-        continue
-    else:
-        print(i, end =' ')
+    if numbers.count(i) == 1:
+        print(i, end = ' ')
