@@ -50,10 +50,10 @@ while True:
     
 
     while True:
-        if not (min == 1 and max == 2):
+        if not max-min == 1:
             guess = min + (max - min) // 2
         else:
-            guess = 2
+            guess = max
 
         print(f'Это {guess}? (1 -- больше, 2 -- меньше, 3 -- равно)')
         yesno = (int(input()))
@@ -82,4 +82,5 @@ while True:
             break
 
     if not willwecontinue:
+        print('Ну ты это, заходи если что :)')
         break
