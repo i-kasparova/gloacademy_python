@@ -73,7 +73,6 @@ while True:
             continue
 
         yesno = int(onceagain)
-        print(yesno)
         if yesno == 1:
             willwecontinue = 1
             break
