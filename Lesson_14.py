@@ -29,6 +29,7 @@ def is_valid_number(number):
     if number.isdigit():
         return True
     else:
+        print('Это не число!\n')
         return False
 
 print('Привет! Я генератор паролей.\nЯ задам пару уточняющих вопросов, на основе которых сгенерирую пароль\n')
