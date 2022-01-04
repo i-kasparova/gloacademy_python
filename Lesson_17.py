@@ -19,10 +19,7 @@ def is_valid_user_word(user_word, secret_word):
         return False
     
     for i in range(len(user_word)):
-        current_number = user_word_int % 10 ** (i+1) // 10 ** i
-        if not current_number in list:
-            list.append(current_number)
-        else:
+        if user_word[i].count != 1:
             return False
 
     return True
