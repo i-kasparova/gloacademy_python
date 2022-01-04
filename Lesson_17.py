@@ -12,9 +12,6 @@ def generate_secret_word():
     return secret_word
 
 def is_valid_user_word(user_word, secret_word):
-    list = []
-    user_word_int = int(user_word)
-
     if not user_word.isdigit() or len(user_word) != len(secret_word):
         return False
     
