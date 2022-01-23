@@ -29,17 +29,12 @@ def result(count, quantity):
         return 'гений'
 
 def save_result(name, count, score):
-    path = Path(Path.cwd(), 'Glo Academy', 'My_Tester', 'results.txt')
-    if not path.exists():
-        f = open(path, 'a')
-        f.write(f"{'Имя':30}{'Кол-во правильных ответов':30}{'Результат':30}\n")
-    else:
-        f = open(path, 'a')
-    
-    f.write(f'{name:30}{count:<30}{score:30}\n')
+    global path
+    f = open(path, 'a')
+    f.write(f'{name}|{count}|{score}\n')
     f.close()
 
-def is_valid_again(answer):
+def is_valid_yesno(answer):
     if answer == 'да' or answer == 'нет':
         return True
     else:
@@ -54,6 +49,7 @@ questions = [
 ]
 
 answers = [6, 9, 25, 60, 2]
+path = Path(Path.cwd(), 'Glo Academy', 'My_Tester', 'results.txt')
 
 name = input('Добрый день! Как вас зовут?\n')
 
@@ -89,11 +85,28 @@ while True:
     
     while True:
         print('Хотите пройти тест снова? (Да/Нет)')
-        onceagain = input().lower()
+        answer = input().lower()
         print()
 
-        if is_valid_again(onceagain):
+        if is_valid_yesno(answer):
             break
+    
+    if not answer.lower() == 'да':
+        while True:
+            print('Хотите посмотреть результаты? (Да/Нет)')
+            answer = input().lower()
+            print()
 
-    if not onceagain.lower() == 'да':
-        break
+            if is_valid_yesno(answer):
+                break
+        if not answer.lower() == 'да':
+            break
+        else:
+            print(f"{'Имя':30}{'Кол-во правильных ответов':30}{'Результат':30}")
+            f = open(path, 'r')
+            for line in f:
+                list = line.split('|')
+                for e in list:
+                    print(f'{e:30}', end='')
+                print()
+            break
