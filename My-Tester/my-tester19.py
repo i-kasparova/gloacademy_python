@@ -93,7 +93,7 @@ while True:
     
     if not answer.lower() == 'да':
         while True:
-            print('Хотите посмотреть результаты? (Да/Нет)')
+            print('Хотите посмотреть результаты предыдущих игр? (Да/Нет)')
             answer = input().lower()
             print()
 
